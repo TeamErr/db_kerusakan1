@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Table structure for table `kerusakan_customer`
 --
 
-CREATE TABLE `customer` (
+CREATE TABLE `kerusakan_customer` (
   `id` int(2) NOT NULL,
   `nim_user` varchar(16) NOT NULL,
   `nama_user` varchar(32) NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `customer`
+-- Dumping data for table `kerusakan_customer`
 --
 
 INSERT INTO `customer` (`id`, `nim_user`, `nama_user`, `no_telpon`, `email`, `password`) VALUES
@@ -49,10 +49,10 @@ INSERT INTO `customer` (`id`, `nim_user`, `nama_user`, `no_telpon`, `email`, `pa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `disposisi`
+-- Table structure for table `kerusakan_disposisi`
 --
 
-CREATE TABLE `disposisi` (
+CREATE TABLE `kerusakan_disposisi` (
   `id` int(2) NOT NULL,
   `id_disposisi` varchar(16) NOT NULL,
   `tahap` int(11) NOT NULL,
@@ -66,10 +66,10 @@ CREATE TABLE `disposisi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `laporan`
+-- Table structure for table `kerusakan_laporan`
 --
 
-CREATE TABLE `laporan` (
+CREATE TABLE `kerusakan_laporan` (
   `id_laporan` int(16) NOT NULL,
   `tgl_laporan` timestamp NOT NULL DEFAULT current_timestamp(),
   `lokasi_gedung` text NOT NULL,
@@ -104,10 +104,10 @@ INSERT INTO `laporan` (`id_laporan`, `tgl_laporan`, `lokasi_gedung`, `lokasi_rua
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pegawai`
+-- Table structure for table `kerusakan_pegawai`
 --
 
-CREATE TABLE `pegawai` (
+CREATE TABLE `kerusakan_pegawai` (
   `id` int(2) NOT NULL,
   `id_pegawai` varchar(16) NOT NULL,
   `nama_pegawai` text NOT NULL,
@@ -120,7 +120,7 @@ CREATE TABLE `pegawai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pegawai`
+-- Dumping data for table `kerusakan_pegawai`
 --
 
 INSERT INTO `pegawai` (`id`, `id_pegawai`, `nama_pegawai`, `nip`, `no_telepon`, `jabatan`, `email`, `password`, `id_unit`) VALUES
@@ -131,10 +131,10 @@ INSERT INTO `pegawai` (`id`, `id_pegawai`, `nama_pegawai`, `nip`, `no_telepon`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `unit`
+-- Table structure for table `kerusakan_unit`
 --
 
-CREATE TABLE `unit` (
+CREATE TABLE `kerusakan_unit` (
   `id` int(2) NOT NULL,
   `id_unit` varchar(16) NOT NULL,
   `nama_unit` text NOT NULL,
@@ -148,31 +148,31 @@ CREATE TABLE `unit` (
 --
 -- Indexes for table `customer`
 --
-ALTER TABLE `customer`
+ALTER TABLE `kerusakan_customer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `disposisi`
+-- Indexes for table `kerusakan_disposisi`
 --
-ALTER TABLE `disposisi`
+ALTER TABLE `kerusakan_disposisi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `laporan`
+-- Indexes for table `kerusakan_laporan`
 --
-ALTER TABLE `laporan`
+ALTER TABLE `kerusakan_laporan`
   ADD PRIMARY KEY (`id_laporan`);
 
 --
--- Indexes for table `pegawai`
+-- Indexes for table `kerusakan_pegawai`
 --
-ALTER TABLE `pegawai`
+ALTER TABLE `kerusakan_pegawai`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `unit`
+-- Indexes for table `kerusakan_unit`
 --
-ALTER TABLE `unit`
+ALTER TABLE `kerusakan_unit`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -180,33 +180,33 @@ ALTER TABLE `unit`
 --
 
 --
--- AUTO_INCREMENT for table `customer`
+-- AUTO_INCREMENT for table `kerusakan_customer`
 --
-ALTER TABLE `customer`
+ALTER TABLE `kerusakan_customer`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `disposisi`
+-- AUTO_INCREMENT for table `kerusakan_disposisi`
 --
-ALTER TABLE `disposisi`
+ALTER TABLE `kerusakan_disposisi`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `laporan`
+-- AUTO_INCREMENT for table `kerusakan_laporan`
 --
-ALTER TABLE `laporan`
+ALTER TABLE `kerusakan_laporan`
   MODIFY `id_laporan` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT for table `pegawai`
+-- AUTO_INCREMENT for table `kerusakan_pegawai`
 --
-ALTER TABLE `pegawai`
+ALTER TABLE `kerusakan_pegawai`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `unit`
+-- AUTO_INCREMENT for table `kerusakan_unit`
 --
-ALTER TABLE `unit`
+ALTER TABLE `kerusakan_unit`
   MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
